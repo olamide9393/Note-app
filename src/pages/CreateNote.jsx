@@ -1,7 +1,7 @@
-
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../RequestUrl';
+
 
 const CreateNote = () => {
          const [data, setdata] = useState([]);

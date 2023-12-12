@@ -11,7 +11,7 @@ import SingleNote from "../pages/SingleNote";
 const Routes = () => {
   const routing = useRoutes([
     {
-      path: "/",
+      path: "/Login",
 //       element: <Navbar />,
 
       children: [
