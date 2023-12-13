@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axiosInstance from "../../RequestUrl";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axiosInstance from "../RequestUrl";
 
 
 const Register = () => {
@@ -44,15 +44,6 @@ const Register = () => {
          <h1 style={{textAlign:'center',fontSize:'50px'}}>REGISTER</h1>
       <br />
       <div className="container">
-        <div className="row">
-          <div className="col-sm-7">
-            {/* <img
-              src={signup}
-              alt=""
-              style={{ width: "100%", height: "80vh" }}
-            /> */}
-          </div>
-          <div className="col-sm-5">
             <div
               className="tab-content container mt-5"
               style={{ backgroundColor: "whitesmoke" }}
@@ -137,8 +128,6 @@ const Register = () => {
                 <ToastContainer/>
               </div>
             </div>
-          </div>
-        </div>
       </div>
     </div>
   );

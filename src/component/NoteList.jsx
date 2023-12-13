@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom/dist/umd/react-router-dom.development";
 import axiosInstance from "../RequestUrl";
 import './Createnote.css'
+import { FaPlusCircle } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
 
 
 
@@ -24,7 +26,7 @@ const NoteList = () => {
 //       setloading(false);
 //     }
 //   }
-const [blog, setblog] = useState();
+const [blogDatas, setblogDatas] = useState();
 const navigate = useNavigate();
 const [loading, setloading] = useState(false);
 
@@ -59,7 +61,10 @@ async function getNote() {
         "Content-Type": "application/json",
       },
     });
-    setblog(data);
+//     setblogDatas(data);
+setblogDatas(Array.isArray(data) ? data : []);
+
+console.log(data);
   } catch (error) {
     // Handle the error appropriately for your application
     if (error.data && error.data.status === 401) {
@@ -76,13 +81,22 @@ async function getNote() {
     <div>
       <div className="container">
         <h1>Notes</h1>
+        <Link style={{marginLeft:"500px"}} to="/Profile">
+        <CgProfile />
+        </Link>
         <input
           className="form-control mr-sm-2"
           type="text"
           placeholder="Search"
         />
+         <div>
+      <Link to="/Create-note" className="createnotecss">
+     
+        <FaPlusCircle />
 
-        <link className="createnotecss" to="/Create-note"> create note</link>
+
+      </Link>
+    </div>
 
         {loading ? ( 
           <h1>
@@ -109,6 +123,7 @@ async function getNote() {
           ))
         )}
       </div>
+      
     </div>
   );
 };

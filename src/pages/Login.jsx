@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "../../RequestUrl";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axiosInstance from "../RequestUrl";
 
 const Login = () => {
   const [Data, setData] = useState();
@@ -33,7 +33,7 @@ const Login = () => {
         position: toast.POSITION.TOP_RIGHT,
       });
 
-      navigate("/");
+      navigate("/Notelist");
       window.location.reload();
     } catch (error) {
       console.log(error);
@@ -51,15 +51,7 @@ const Login = () => {
       <h1 style={{ textAlign: "center", fontSize: "50px" }}>LOGIN</h1>
       <br />
       <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            {/* <img
-              src={signup}
-              alt=""
-              style={{ width: "100%", height: "50vh" }}
-            /> */}
-          </div>
-          <div className="col-md-6">
+        
             <div
               className="tab-content container mt-5"
               style={{ backgroundColor: "whitesmoke" }}
@@ -117,8 +109,7 @@ const Login = () => {
                 <ToastContainer />
               </div>
             </div>
-          </div>
-        </div>
+         
       </div>
     </div>
   );

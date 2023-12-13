@@ -23,7 +23,7 @@ const CreateNote = () => {
                   console.log(response);
                      alert('you have successfully add your blog')
                setResult(response.data)
-                     navigate('/')
+                     navigate('/NoteList')
                } catch (error) {
                      console.log(error)
                }

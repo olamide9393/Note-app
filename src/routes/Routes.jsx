@@ -11,12 +11,20 @@ import SingleNote from "../pages/SingleNote";
 const Routes = () => {
   const routing = useRoutes([
     {
-      path: "/Login",
+      path: "/",
 //       element: <Navbar />,
 
       children: [
         {
           index: true,
+          element: <Login />,
+        },
+        {
+          path: "navbar",
+          element: <Navbar />,
+        },
+        {
+          path: "NoteList",
           element: <NoteList />,
         },
         {
