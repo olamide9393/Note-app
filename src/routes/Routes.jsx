@@ -17,15 +17,15 @@ const Routes = () => {
       children: [
         {
           index: true,
-          element: <Login />,
+          element: <NoteList />,
         },
         {
           path: "navbar",
           element: <Navbar />,
         },
         {
-          path: "NoteList",
-          element: <NoteList />,
+          path: "Lgin",
+          element: <Login />,
         },
         {
           path: "Create-note",

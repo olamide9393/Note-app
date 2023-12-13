@@ -81,7 +81,7 @@ console.log(data);
     <div>
       <div className="container">
         <h1>Notes</h1>
-        <Link style={{marginLeft:"500px"}} to="/Profile">
+        <Link style={{marginLeft:"500px"}} to="/login">
         <CgProfile />
         </Link>
         <input
