@@ -53,7 +53,7 @@ const CreateNote = () => {
 
             </div>
             <br /> 
-            <button style={{width:'100%'}} className='btn btn-success' onClick={submitForm}>PUBLISH</button>
+            <button style={{width:'100%'}} className='btn btn-success' onClick={submitForm}>SAVE</button>
       </form>
       {Result && <div style={{ color: "red" }}>{Result}</div>}
         

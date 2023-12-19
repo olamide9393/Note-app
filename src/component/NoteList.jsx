@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom/dist/umd/react-router-dom.development";
 import axiosInstance from "../RequestUrl";
 import "./Createnote.css";
-import { FaPlusCircle } from "react-icons/fa";
+import { FaPlusCircle, FaTrash } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 
 const NoteList = () => {
@@ -146,8 +146,12 @@ const NoteList = () => {
               <Link className="decoration" style={{ color: "black" }} to={"/note/" + elem._id}>
                 <h5 style={{ color: "" }}>{elem.title}</h5>
                 <p style={{ color: "" }}>{elem.content.slice(0, 100)}</p>
-                <p style={{color:'grey'}}>{elem.createdAt}</p>
+                <p style={{color:'grey'}}>{elem.createdAt}</p>  
               </Link>
+               <div style={{marginLeft:'1000px'}}>
+               <FaTrash/>
+
+               </div>
             </div>
           ))
         )}
