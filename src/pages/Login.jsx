@@ -33,7 +33,7 @@ const Login = () => {
         position: toast.POSITION.TOP_RIGHT,
       });
 
-      navigate("/Notelist");
+      navigate("/");
       window.location.reload();
     } catch (error) {
       console.log(error);

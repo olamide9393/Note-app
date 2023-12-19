@@ -17,17 +17,27 @@ const CreateNote = () => {
             }
          async function submitForm(e) {
          e.preventDefault(); 
-
+         // Retrieve the token string from local storage
+    const tokenString = localStorage.getItem("user");
+    const { token } = JSON.parse(tokenString);
          try {
-                  const response = await axiosInstance.post("note/createNote", data,);
+                  const response = await axiosInstance.post("note/createNote", data, {
+                        headers: {
+                              Authorization: `Bearer ${token}`,
+                              "Content-Type": "application/json",
+                            },});
                   console.log(response);
                      alert('you have successfully add your blog')
                setResult(response.data)
-                     navigate('/NoteList')
+                     navigate('/')
                } catch (error) {
                      console.log(error)
                }
          }
+
+
+
+         
   return (
     <div>
       
