@@ -7,6 +7,7 @@ import EditNote from "../pages/EditNote";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import SingleNote from "../pages/SingleNote";
+import UserProfile from "../pages/UserProfile";
 
 const Routes = () => {
   const routing = useRoutes([
@@ -22,10 +23,6 @@ const Routes = () => {
         {
           path: "navbar",
           element: <Navbar />,
-        },
-        {
-          path: "Lgin",
-          element: <Login />,
         },
         {
           path: "Create-note",
@@ -46,6 +43,10 @@ const Routes = () => {
         {
           path: "Register",
           element: <Register />,
+        },
+        {
+          path: "Profile",
+          element: <UserProfile />,
         },
       ],
     },

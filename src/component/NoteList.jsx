@@ -11,7 +11,7 @@ const NoteList = () => {
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
@@ -39,14 +39,13 @@ const NoteList = () => {
     //   navigate("/login");
     // }
     try {
-      const {data} = await axiosInstance.get("note/getNote", {
+      const { data } = await axiosInstance.get("note/getNote", {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
       });
       setblogDatas(Array.isArray(data.message) ? data.message : []);
-
 
       console.log(data);
     } catch (error) {
@@ -74,8 +73,6 @@ const NoteList = () => {
     navigate("/login");
   };
 
-
-  
   return (
     <div>
       <div className="container">
@@ -94,7 +91,7 @@ const NoteList = () => {
               // Display "Logout" if the user is logged in
               <>
                 <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/">
+                  <Link className="dropdown-item" to="/Profile">
                     PROFILE
                   </Link>
 
@@ -131,27 +128,30 @@ const NoteList = () => {
 
         {loading ? (
           <h1>
-            <div 
+            <div
               className="spinner-border text-muted"
               style={{ width: "100px", height: "100px" }}
             ></div>
           </h1>
         ) : (
           blogDatas?.map((elem) => (
-            <div 
+            <div
               className="blog-preview"
               key={elem._id}
               style={{ marginTop: "20px" }}
             >
-              <Link className="decoration" style={{ color: "black" }} to={"/note/" + elem._id}>
+              <Link
+                className="decoration"
+                style={{ color: "black" }}
+                to={"/note/" + elem._id}
+              >
                 <h5 style={{ color: "" }}>{elem.title}</h5>
                 <p style={{ color: "" }}>{elem.content.slice(0, 100)}</p>
-                <p style={{color:'grey'}}>{elem.createdAt}</p>  
+                <p style={{ color: "grey" }}>{elem.createdAt}</p>
               </Link>
-               <div style={{marginLeft:'1000px'}}>
-               <FaTrash/>
-
-               </div>
+              <div style={{ marginLeft: "1000px" }}>
+                <FaTrash />
+              </div>
             </div>
           ))
         )}
