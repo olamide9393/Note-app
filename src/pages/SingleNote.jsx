@@ -34,7 +34,7 @@ const SingleNote = () => {
                navigate("/login");
              }
              try {
-               const { data } = await axiosInstance.get(`blog/${id}`, {
+               const { data } = await axiosInstance.get(`note/${id}`, {
                  headers: {
                    Authorization: `Bearer ${token}`,
                    "Content-Type": "application/json",
@@ -66,7 +66,7 @@ const SingleNote = () => {
           {blog && (
             <div>
               <br />
-              <h1 style={{}}>{blog.title}</h1>
+              <h1 style={{textAlign:"center"}}>{blog.title}</h1>
               <br />
               <h4 style={{textAlign:'center',color:'grey'}}>{blog.content}</h4>
 

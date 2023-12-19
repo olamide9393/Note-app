@@ -27,7 +27,7 @@ const CreateNote = () => {
                               "Content-Type": "application/json",
                             },});
                   console.log(response);
-                     alert('you have successfully add your blog')
+                     alert('you have successfully add to your note')
                setResult(response.data)
                      navigate('/')
                } catch (error) {
