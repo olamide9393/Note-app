@@ -79,7 +79,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 style={{
                   color: "black",
@@ -92,8 +92,8 @@ const Navbar = () => {
               >
                 HOME
               </Link>
-            </li>
-            <nav className="navbar navbar-expand-sm navbar-dark">
+            </li> */}
+            <nav className="navbar navbar-expand-sm navbar-dark" style={{marginLeft:'100px'}}>
             <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style={{fontSize:'20px',color:'black'}}>
       <CgProfile />
