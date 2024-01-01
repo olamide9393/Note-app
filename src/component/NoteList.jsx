@@ -76,50 +76,14 @@ const NoteList = () => {
   return (
     <div>
       <div className="container">
-        <h1>Notes</h1>
+      <input
+  style={{ width: "100%" }}
+  className="form-control mr-sm-2"
+  type="text"
+  placeholder="Search"
+/>
+        
 
-        <ul
-          class="nav nav-pills"
-          style={{ marginLeft: "700px", fontSize: "30px", marginTop: "-50px" }}
-        >
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-              <CgProfile />
-            </a>
-
-            {isLoggedIn ? (
-              // Display "Logout" if the user is logged in
-              <>
-                <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/Profile">
-                    PROFILE
-                  </Link>
-
-                  <Link className="dropdown-item" to="/login">
-                    LOGOUT
-                  </Link>
-                </div>
-              </>
-            ) : (
-              // Display "Login" and "Register" if the user is not logged in
-              <>
-                <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/login">
-                    LOGIN
-                  </Link>
-                </div>
-              </>
-            )}
-          </li>
-        </ul>
-
-        {/* </Link> */}
-        <input
-          style={{ width: "100%" }}
-          className="form-control mr-sm-2"
-          type="text"
-          placeholder="Search"
-        />
         <div>
           <Link to="/Create-note" className="createnotecss">
             <FaPlusCircle />

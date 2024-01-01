@@ -1,5 +1,6 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
+import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
 import NoteList from "../component/NoteList";
 import CreateNote from "../pages/CreateNote";
@@ -13,7 +14,7 @@ const Routes = () => {
   const routing = useRoutes([
     {
       path: "/",
-//       element: <Navbar />,
+      element: <Navbar />,
 
       children: [
         {
@@ -48,8 +49,14 @@ const Routes = () => {
           path: "Profile",
           element: <UserProfile />,
         },
+        {
+          path: "Footer",
+          element: <Footer />,
+        },
       ],
     },
+
+    
   ]);
   return <div>{routing}</div>;
 };

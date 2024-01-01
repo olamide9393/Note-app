@@ -66,9 +66,9 @@ const SingleNote = () => {
           {blog && (
             <div>
               <br />
-              <h1 style={{textAlign:"center"}}>{blog.title}</h1>
+              <h1>{blog.title}</h1>
               <br />
-              <h4 style={{textAlign:'center',color:'grey'}}>{blog.content}</h4>
+              <h4 style={{color:'grey'}}>{blog.content}</h4>
 
 
             </div>
