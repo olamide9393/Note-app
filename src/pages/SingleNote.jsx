@@ -1,6 +1,8 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axiosInstance from "../RequestUrl";
+import "./Single.css";
+
 
 const SingleNote = () => {
 
@@ -68,7 +70,10 @@ const SingleNote = () => {
               <br />
               <h1>{blog.title}</h1>
               <br />
-              <h4 style={{color:'grey'}}>{blog.content}</h4>
+              <div className="single">
+
+              <h4 style={{color:'grey',lineHeight:'50px'}}>{blog.content}</h4>
+              </div>
 
 
             </div>

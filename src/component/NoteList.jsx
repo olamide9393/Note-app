@@ -113,9 +113,9 @@ const NoteList = () => {
                 <p style={{ color: "" }}>{elem.content.slice(0, 100)}</p>
                 <p style={{ color: "grey" }}>{elem.createdAt}</p>
               </Link>
-              <div style={{ marginLeft: "1000px" }}>
+              {/* <div style={{ marginLeft: "1000px" }}>
                 <FaTrash />
-              </div>
+              </div> */}
             </div>
           ))
         )}

@@ -43,6 +43,13 @@ const CreateNote = () => {
           ref={formRef}
           style={{ fontSize: "20px" }}
         >
+             <button
+            style={{ width: "100%" }}
+            className="btn btn-success"
+            onClick={submitForm}
+          >
+            SAVE
+          </button>
           <div>
             <input
               type="text"
@@ -60,13 +67,13 @@ const CreateNote = () => {
             ></textarea>
           </div>
           <br />
-          <button
+          {/* <button
             style={{ width: "100%" }}
             className="btn btn-success"
             onClick={submitForm}
           >
             SAVE
-          </button>
+          </button> */}
         </form>
         {Result && <div style={{ color: "red" }}>{Result}</div>}
       </div>
