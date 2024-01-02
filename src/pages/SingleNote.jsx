@@ -68,11 +68,11 @@ const SingleNote = () => {
           {blog && (
             <div>
               <br />
-              <h1>{blog.title}</h1>
+              <h3>{blog.title}</h3>
               <br />
               <div className="single">
 
-              <h4 style={{color:'grey',lineHeight:'50px'}}>{blog.content}</h4>
+              <p style={{color:'grey',lineHeight:'50px'}}>{blog.content}</p>
               </div>
 
 
