@@ -1,0 +1,6 @@
+.form{
+         border: none;
+}
+.form:focus{
+         outline: none;
+}

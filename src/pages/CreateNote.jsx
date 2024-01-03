@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../RequestUrl";
+import "./Createnote.css";
+
 
 const CreateNote = () => {
   const [data, setdata] = useState([]);
@@ -50,20 +52,24 @@ const CreateNote = () => {
           >
             SAVE
           </button>
+          <br /><br />
           <div>
             <input
               type="text"
-              className="form-control"
+              className="form"
               name="title"
               onChange={handleChange}
+              placeholder="title"
             />
           </div>
           <div>
             <textarea
-              className="form-control"
+              className="form"
               name="content"
               onChange={handleChange}
               style={{ height: "100vh" }}
+              placeholder="content"
+
             ></textarea>
           </div>
           <br />
