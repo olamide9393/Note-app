@@ -13,6 +13,14 @@ const Navbar = () => {
     const token = localStorage.getItem("user");
     setIsLoggedIn(!!token); // Set isLoggedIn to true if token is available
   }, []);
+
+
+  const handleLogout = () => {
+    // Clear the token from local storage on logout
+    localStorage.removeItem("user");
+    setIsLoggedIn(false);
+    navigate("/login");
+  };
   return (
     <div>
               {/* <h1>Notes</h1>
