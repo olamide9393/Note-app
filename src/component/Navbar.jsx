@@ -119,6 +119,9 @@ const Navbar = () => {
           <Link className="dropdown-item" to="/login">
             LOGIN
           </Link>
+          <Link className="dropdown-item" to="/Register">
+            REGISTER
+          </Link>
         </div>
       </>
     )}
